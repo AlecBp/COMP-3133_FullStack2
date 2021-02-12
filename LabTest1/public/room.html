@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/room.css" />
+    <meta name="author" content="Alec Pagliarussi" />
+    <title>Chat App - Room</title>
+  </head>
+  <body>
+    <div class="container mx-auto mt-10">
+      <header class="flex">
+        <h1 class="w-full text-red-600 text-5xl text-center flex-grow-h-16">
+          Chat App
+        </h1>
+        <a
+          class="text-center p-1 text-red-600 hover:text-black hover:bg-red-100 flex-grow-0 bg-white text-dark text-xl border-2 border-red-600"
+          href="index.html"
+          >Leave Room</a
+        >
+      </header>
+
+      <main>
+        <div>
+          <h3 class="text-2xl">
+            Room Name: <span class="text-2xl font-bold" id="room-name"></span>
+          </h3>
+
+          <h3 class="text-2xl">Users</h3>
+          <ul class="bg-gray-100" id="userList"></ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg">Messages</h3>
+          <ul
+            class="bg-gray-100 rounded shadow p-5"
+            id="messageBox"
+            style="overflow: scroll; height: 400px"
+          ></ul>
+        </div>
+      </main>
+
+      <div class="mt-10">
+        <div id="typingMsg"></div>
+        <form id="msgFrom" class="flex">
+          <input
+            class="w-4/5 shadow appearance-none border text-gray-700 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            id="msg"
+            type="text"
+            placeholder="Type message..."
+            required
+            autocomplete="off"
+          />
+          <button
+            class="w-1/5 bg-white hover:bg-red-100 font-semibold py-2 px-4 border border-gray-400"
+          >
+            Send message
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+      integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

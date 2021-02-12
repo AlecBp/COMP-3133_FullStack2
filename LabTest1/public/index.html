@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="author" content="Alec Pagliarussi" />
+    <title>Chat App</title>
+  </head>
+  <body>
+    <div class="container mx-auto align-middle mt-10">
+      <header>
+        <h1 class="text-red-600 text-5xl text-center">Chat App</h1>
+      </header>
+
+      <main>
+        <form action="room.html" class="flex flex-col">
+          <div class="flex flex-col my-5">
+            <label class="mb-2 font-bold text-xl" for="username"
+              >Username</label
+            >
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Enter username..."
+              required
+            />
+          </div>
+
+          <div class="flex flex-col my-5">
+            <label for="room" class="mb-2 font-bold text-xl">Room</label>
+            <select
+              name="room"
+              id="room"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            >
+              <option value="news">News</option>
+              <option value="covid19">Covid19</option>
+              <option value="nodejs">Nodejs</option>
+            </select>
+          </div>
+
+          <div class="mx-auto my-5">
+            <button
+              class="bg-white hover:bg-red-100 font-semibold py-2 px-5 border border-gray-400 rounded shadow text-2xl"
+              type="submit"
+            >
+              Join Chat Room
+            </button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
